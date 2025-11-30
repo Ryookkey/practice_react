@@ -2,6 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+// import MyHello from './chapter3/MyHello';
+// import EventBasic from './chapter3/EventBasic.jsx';
+import StateBasic from './chapter3/StateBasic.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -11,7 +14,7 @@ createRoot(document.getElementById('root')).render(
 
 // １行下のconst root = createRoot部分は更に下でサンプルコードを記載する場合コメントアウト解除すること
 
-// const root = createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 
 // 以下は基本的にコメントアウトのまま
 // setInterval(() => {
@@ -31,3 +34,15 @@ createRoot(document.getElementById('root')).render(
 // root.render(
 //   <p>こんにちは、{name}です！</p>
 // );
+
+// root.render(
+//   <MyHello myName="鈴木"  />
+// );
+
+// root.render(
+//   <EventBasic type='time' />
+// );
+
+root.render(
+  <StateBasic init={0} />
+);
